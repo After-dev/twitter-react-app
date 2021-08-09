@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import 'App.css'
+import Button from 'components/Button'
+
+import { ReactComponent as Home } from 'assets/icons/home.svg'
 
 function App() {
+
+  function handleOnClick() {
+    console.log('Click')
+    alert('Click')
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Button
+      text='aaa'
+      icon={<Home/>}
+      defaultColor='blue'
+      iconSize='26px'
+      padding='10px'
+      paddingText='0 50px'
+      hoverEffect={true}
+      hoverBackgroundColor='green'
+      hoverColor='black'
+      handleClick={handleOnClick}
+      notificationNum='0'
+      notificationColor='blue'
+      />
+  )
 }
 
 export default App;
