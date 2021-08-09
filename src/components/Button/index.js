@@ -1,9 +1,9 @@
 import React from 'react'
 import {
   Container,
-  DivVerticalCenter,
   Icon,
-  Notification
+  Notification,
+  Text
 } from './styles'
 
 export default function Button ({borderColor, backgroundColor, 
@@ -16,30 +16,38 @@ export default function Button ({borderColor, backgroundColor,
     <Container
       backgroundColor={backgroundColor}
       borderColor={borderColor}
+      defaultColor={defaultColor}
       disabled={disabled}
       hoverBackgroundColor={hoverBackgroundColor}
       hoverColor={hoverColor}
       hoverEffect={hoverEffect}
+      iconSize={iconSize}
       onClick={handleClick}
       padding={padding}
       shadowEffect={shadowEffect}
       title={tooltipText}>
-
-      <DivVerticalCenter
-        defaultColor={defaultColor}
-        iconSize={iconSize}
-        textSize={textSize}
-        paddingText={paddingText}>
+        {icon &&
           <Icon>
-            {icon && icon}
+            {icon}
             {notificationNum &&
-              <Notification backgroundColor={notificationColor}>
-                {notificationNum !== '0' && notificationNum}
+              <Notification
+                backgroundColor={notificationColor}
+                notificationNum={notificationNum}
+                >
+                  {notificationNum !== '0' && notificationNum}
               </Notification>
             }
           </Icon>
-          {text && <span>{text}</span>}
-      </DivVerticalCenter>
+        }
+
+        {text &&
+          <Text
+            defaultColor={defaultColor}
+            paddingText={paddingText}
+            textSize={textSize}>
+              {text}
+          </Text>
+        }
     </Container>
   )
 }
