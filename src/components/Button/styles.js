@@ -43,7 +43,7 @@ export const Container = styled('div')`
             fill: ${hoverColor};
           }
 
-          & > span:nth-child(2) {
+          & > span {
             color: ${hoverColor};
           }
         }
@@ -61,11 +61,10 @@ export const Container = styled('div')`
 `
 
 export const Icon = styled('div')`
-  ${props => {
-    return `
-      position: relative;
-    `
-  }}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 `
 
 export const Notification = styled('span')`
