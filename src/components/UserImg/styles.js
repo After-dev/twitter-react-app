@@ -11,6 +11,8 @@ export const Container = styled('div')`
     return `
       width: ${size};
       height: ${size};
+      min-height: ${size};
+      min-width: ${size};
     `
   }}
 
