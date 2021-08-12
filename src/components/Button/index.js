@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   Container,
   Icon,
@@ -32,8 +31,7 @@ export default function Button ({borderColor, backgroundColor,
             {notificationNum &&
               <Notification
                 backgroundColor={notificationColor}
-                notificationNum={notificationNum}
-                >
+                notificationNum={notificationNum}>
                   {notificationNum !== '0' && notificationNum}
               </Notification>
             }
