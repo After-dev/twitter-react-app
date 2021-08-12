@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 
 export const Container = styled('button')`
+  background-color: transparent;
   cursor: pointer;
   border: none;
   display: inline-block;
