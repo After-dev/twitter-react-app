@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import {
   Container,
+  ContainerPadd,
   TweetHeaderContainer,
   TweetHeaderUserInfo,
   TweetHeaderPrimary,
@@ -31,27 +32,32 @@ export default function ExternalTweet ({tweetRef}) {
         'date': 1628590802428,
         'text': 'ewfgjbwog ewgijnwrg ijnrgijnrgin4grrgijrngi4nrgijn4gij'
       })
-      // Calcular diferencias de tiempo del tweet
+    }
+  }, [])
+
+  useEffect(() => {
+    // Calcular diferencias de tiempo del tweet
+    if (externalTweet.date) {
       const {dateStr, dateDiffStr} = dateDiff(externalTweet.date)
       setDate(dateStr)
       setDateToShow(dateDiffStr)
     }
-  }, [])
+  }, [externalTweet])
 
   return (
     <Container>
-      <TweetHeaderContainer>
-        <TweetHeaderUserInfo>
-          <UserImg src={externalTweet.userIcon} size='18px' />
-          <TweetHeaderPrimary>{externalTweet.userName}</TweetHeaderPrimary>
-          <TweetHeaderSecondary>@{externalTweet.userAlias}</TweetHeaderSecondary>
-        </TweetHeaderUserInfo>
-        <TweetHeaderSecondary>·</TweetHeaderSecondary>
-        <TweetHeaderSecondary title={date}>{dateToShow}</TweetHeaderSecondary>
-      </TweetHeaderContainer>
-      <TweetTextContainer>
+      <ContainerPadd>
+        <TweetHeaderContainer>
+          <TweetHeaderUserInfo>
+            <UserImg src={externalTweet.userIcon} size='18px' />
+            <TweetHeaderPrimary>{externalTweet.userName}</TweetHeaderPrimary>
+            <TweetHeaderSecondary>@{externalTweet.userAlias}</TweetHeaderSecondary>
+          </TweetHeaderUserInfo>
+          <TweetHeaderSecondary>·</TweetHeaderSecondary>
+          <TweetHeaderSecondary title={date}>{dateToShow}</TweetHeaderSecondary>
+        </TweetHeaderContainer>
         <TweetText>{externalTweet.text}</TweetText>
-      </TweetTextContainer>
+      </ContainerPadd>
     </Container>
   )
 }

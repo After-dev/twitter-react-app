@@ -5,18 +5,19 @@ export const Container = styled('div')`
   background-color: orange;
   border: 1px solid rgb(207, 217, 222);
   border-radius: 16px;
+  width: 100%;
+`
+
+export const ContainerPadd = styled('div')`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  padding: 12px;
 `
 
 export const TweetHeaderContainer = styled('div')`
   background-color: red;
   display: flex;
   overflow: hidden;
-  margin-top: 12px;
-  margin-left: 12px;
-  margin-right: 12px;
 `
 
 export const TweetHeaderUserInfo = styled('div')`
@@ -43,12 +44,7 @@ export const TweetHeaderSecondary = styled('span')`
   margin-left: 4px;
 `
 
-export const TweetTextContainer = styled('div')`
-  background-color: blue;
-  margin-bottom: 12px;
-  margin-left: 12px;
-  margin-right: 12px;
-`
+export const TweetTextContainer = styled('div')``
 
 export const TweetText = styled('span')`
   color: black;
