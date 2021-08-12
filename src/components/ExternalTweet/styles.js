@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 
 export const Container = styled('div')`
-  background-color: orange;
   border: 1px solid rgb(207, 217, 222);
   border-radius: 16px;
   width: 100%;
@@ -15,7 +14,6 @@ export const ContainerPadd = styled('div')`
 `
 
 export const TweetHeaderContainer = styled('div')`
-  background-color: red;
   display: flex;
   overflow: hidden;
 `
