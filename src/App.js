@@ -1,7 +1,14 @@
 import 'App.css'
-import Button from 'components/Button'
+import {
+  AppContainer,
+  MainMenuContainer,
+  PrimaryContainer,
+  AddsContainer
+} from './styles'
 
-import { ReactComponent as Home } from 'assets/icons/home.svg'
+import { ReactComponent as Homee } from 'assets/icons/home.svg'
+import { ReactComponent as Etc } from 'assets/icons/etc.svg'
+import userImg from'assets/imgs/user_img.jpg'
 
 function App() {
 
@@ -11,20 +18,17 @@ function App() {
   }
 
   return (
-    <Button
-      text='aaa'
-      icon={<Home/>}
-      defaultColor='blue'
-      iconSize='26px'
-      padding='10px'
-      paddingText='0 50px'
-      hoverEffect={true}
-      hoverBackgroundColor='green'
-      hoverColor='black'
-      handleClick={handleOnClick}
-      notificationNum='0'
-      notificationColor='blue'
-      />
+    <AppContainer>
+      <MainMenuContainer>
+
+      </MainMenuContainer>
+      <PrimaryContainer>
+        {/* <Home /> */}
+      </PrimaryContainer>
+      <AddsContainer>
+        
+      </AddsContainer>
+    </AppContainer>
   )
 }
 
