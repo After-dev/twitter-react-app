@@ -90,7 +90,7 @@ export default function Home () {
           text='Twittear'
           icon={<Tweetear />}
           defaultColor='white'
-          iconSize='28px'
+          iconSize='24px'
           textSize='15px'
           padding='12px'
           paddingText='0px 70px'
