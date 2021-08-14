@@ -5,6 +5,7 @@ import {
   PrimaryContainer,
   AddsContainer
 } from './styles'
+import MainMenu from 'components/MainMenu'
 
 import { ReactComponent as Homee } from 'assets/icons/home.svg'
 import { ReactComponent as Etc } from 'assets/icons/etc.svg'
@@ -20,7 +21,7 @@ function App() {
   return (
     <AppContainer>
       <MainMenuContainer>
-
+        <MainMenu />
       </MainMenuContainer>
       <PrimaryContainer>
         {/* <Home /> */}

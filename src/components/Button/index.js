@@ -1,5 +1,6 @@
 import {
   Container,
+  ContainerContent,
   Icon,
   Notification,
   Text
@@ -12,40 +13,42 @@ export default function Button ({borderColor, backgroundColor,
   handleClick, tooltipText}) {
     
   return (
-    <Container
-      backgroundColor={backgroundColor}
-      borderColor={borderColor}
-      defaultColor={defaultColor}
-      disabled={disabled}
-      hoverBackgroundColor={hoverBackgroundColor}
-      hoverColor={hoverColor}
-      hoverEffect={hoverEffect}
-      iconSize={iconSize}
-      onClick={handleClick}
-      padding={padding}
-      shadowEffect={shadowEffect}
-      title={tooltipText}>
-        {icon &&
-          <Icon>
-            {icon}
-            {notificationNum &&
-              <Notification
-                backgroundColor={notificationColor}
-                notificationNum={notificationNum}>
-                  {notificationNum !== '0' && notificationNum}
-              </Notification>
-            }
-          </Icon>
-        }
+    <Container>
+      <ContainerContent
+        backgroundColor={backgroundColor}
+        borderColor={borderColor}
+        defaultColor={defaultColor}
+        disabled={disabled}
+        hoverBackgroundColor={hoverBackgroundColor}
+        hoverColor={hoverColor}
+        hoverEffect={hoverEffect}
+        iconSize={iconSize}
+        onClick={handleClick}
+        padding={padding}
+        shadowEffect={shadowEffect}
+        title={tooltipText}>
+          {icon &&
+            <Icon>
+              {icon}
+              {notificationNum &&
+                <Notification
+                  backgroundColor={notificationColor}
+                  notificationNum={notificationNum}>
+                    {notificationNum !== '0' && notificationNum}
+                </Notification>
+              }
+            </Icon>
+          }
 
-        {text &&
-          <Text
-            defaultColor={defaultColor}
-            paddingText={paddingText}
-            textSize={textSize}>
-              {text}
-          </Text>
-        }
+          {text &&
+            <Text
+              defaultColor={defaultColor}
+              paddingText={paddingText}
+              textSize={textSize}>
+                {text}
+            </Text>
+          }
+      </ContainerContent>
     </Container>
   )
 }

@@ -2,6 +2,10 @@ import styled from 'styled-components'
 
 
 export const Container = styled('div')`
+  display: inline-block;
+`
+
+export const ContainerContent = styled('div')`
   ${props => {
     const backgroundColor = props.backgroundColor
     const borderColor = props.borderColor
@@ -99,6 +103,7 @@ export const Text = styled('span')`
     return `
       color: ${defaultColor || `black`};
       font-size: ${textSize || `15px`};
+      font-weight: 700;
       padding: ${paddingText || `0`};
     `
   }}
