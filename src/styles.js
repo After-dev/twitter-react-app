@@ -34,10 +34,11 @@ export const PrimaryContainer = styled('div')`
 
 export const AddsContainer = styled('div')`
   background-color: lightsalmon;
-  width: 350px;
+  padding-left: 20px;
+  width: 330px;
 
   ${bps.bp2} {
-    width: 290px;
+    width: 270px;
   }
 
   ${bps.bp3} {

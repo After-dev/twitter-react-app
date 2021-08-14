@@ -6,6 +6,7 @@ import {
   AddsContainer
 } from './styles'
 import MainMenu from 'components/MainMenu'
+import AddsMenu from 'components/AddsMenu'
 
 import { ReactComponent as Homee } from 'assets/icons/home.svg'
 import { ReactComponent as Etc } from 'assets/icons/etc.svg'
@@ -27,7 +28,7 @@ function App() {
         {/* <Home /> */}
       </PrimaryContainer>
       <AddsContainer>
-        
+        <AddsMenu showSearch/>
       </AddsContainer>
     </AppContainer>
   )
