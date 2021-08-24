@@ -115,6 +115,7 @@ export const PanelCopyright = styled('div')`
 `
 
 export const CopyrightLink = styled('a')`
+  color: gray;
   cursor: pointer;
   display: inline-block;
   padding-right: 12px;
@@ -123,13 +124,5 @@ export const CopyrightLink = styled('a')`
 
   :hover {
     text-decoration: underline;
-  }
-
-  :active {
-    color: gray;
-  }
-
-  :visited {
-    color: gray;
   }
 `
