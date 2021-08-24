@@ -23,6 +23,7 @@ export const ContainerCenter = styled('div')`
       :hover {
         & > div:nth-child(1) {
           background-color: ${hoverBackgroundColor};
+          border-radius: 9999px;
         }
 
         & svg {

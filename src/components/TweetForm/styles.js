@@ -3,19 +3,16 @@ import { bps } from 'styles'
 
 
 export const Container = styled('div')`
-  background-color: blue;
   display: flex;
   padding: 4px 16px;
 `
 
 export const ImgContainer = styled('div')`
-  background-color: yellow;
   margin-right: 12px;
   padding-top: 4px;
 `
 
 export const FormContainer = styled('div')`
-  background-color: orange;
   padding-top: 4px;
   width: 100%;
 `

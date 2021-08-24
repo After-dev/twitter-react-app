@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 
 export const Container = styled('div')`
-  background-color: blue;
   cursor: pointer;
   width: 100%;
 `
@@ -14,7 +13,6 @@ export const ContainerTweet = styled('div')`
 `
 
 export const Status = styled('div')`
-  background-color: red;
   display: flex;
   align-items: center;
   margin-bottom: 4px;
@@ -47,19 +45,16 @@ export const StatusText = styled('a')`
 `
 
 export const TweetContent = styled('div')`
-  background-color: red;
   display: flex;
 `
 
 export const TweetDetail = styled('div')`
-  background-color: yellow;
   margin-left: 12px;
   overflow: hidden;
   width: 100%;
 `
 
 export const TweetHeader = styled('div')`
-  background-color: orange;
   display: flex;
   justify-content: space-between;
 `
@@ -98,7 +93,6 @@ export const TweetHeaderSecondary = styled('span')`
 `
 
 export const TweetTextContainer = styled('div')`
-  background-color: pink;
   color: black;
   font-size: 15px;
   font-weight: 400;
@@ -108,17 +102,14 @@ export const TweetTextContainer = styled('div')`
 export const TweetText = styled('span')``
 
 export const TweetMediaContainer = styled('div')`
-  background-color: purple;
   margin-top: 12px;
 `
 
 export const TweetRefContainer = styled('div')`
-  background-color: green;
   margin-top: 12px;
 `
 
 export const TweetButtonsContainer = styled('div')`
-  background-color: lightblue;
   display: flex;
   align-items: center;
   justify-content: space-around;

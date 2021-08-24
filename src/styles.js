@@ -4,7 +4,8 @@ import styled from 'styled-components'
 export const bps = {
   bp1: '@media screen and (max-width: 1265px)',
   bp2: '@media screen and (max-width: 1077px)',
-  bp3: '@media screen and (max-width: 987px)'
+  bp3: '@media screen and (max-width: 987px)',
+  bp4: '@media screen and (max-width: 687px)'
 }
 
 export const AppContainer = styled('div')`

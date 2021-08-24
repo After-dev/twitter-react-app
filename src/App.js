@@ -7,9 +7,8 @@ import {
 } from './styles'
 import MainMenu from 'components/MainMenu'
 import AddsMenu from 'components/AddsMenu'
+import Home from 'pages/Home'
 
-import { ReactComponent as Homee } from 'assets/icons/home.svg'
-import { ReactComponent as Etc } from 'assets/icons/etc.svg'
 import userImg from'assets/imgs/user_img.jpg'
 
 function App() {
@@ -25,7 +24,7 @@ function App() {
         <MainMenu />
       </MainMenuContainer>
       <PrimaryContainer>
-        {/* <Home /> */}
+        <Home />
       </PrimaryContainer>
       <AddsContainer>
         <AddsMenu showSearch/>

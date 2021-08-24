@@ -20,19 +20,19 @@ import { ReactComponent as Calendar } from 'assets/icons/calendar.svg'
 
 
 const maxTweetLength = 280
+const actionButtons = [
+  <Multimedia />,
+  <Gif />,
+  <Bars />,
+  <FaceHappy />,
+  <Calendar />
+]
 
 export default function TweetForm () {
   const textElement = useRef()
   const [tweetText, setTweetText] = useState('')
   const [showLink, setShowLink] = useState(false)
   const [showCounter, setShowCounter] = useState(false)
-  const [actionButtons] = useState([
-    <Multimedia />,
-    <Gif />,
-    <Bars />,
-    <FaceHappy />,
-    <Calendar />
-  ])
 
   // MaxLength = 280
   function handleTextChange () {
