@@ -15,7 +15,6 @@ export const AppContainer = styled('div')`
 `
 
 export const MainMenuContainer = styled('div')`
-  background-color: lightgreen;
   padding: 0px 12px;
   height: 100%;
   width: 251px;
@@ -26,7 +25,6 @@ export const MainMenuContainer = styled('div')`
 `
 
 export const PrimaryContainer = styled('div')`
-  background-color: lightgrey;
   display: flex;
   flex-direction: column;
   max-width: 600px;
@@ -34,7 +32,6 @@ export const PrimaryContainer = styled('div')`
 `
 
 export const AddsContainer = styled('div')`
-  background-color: lightsalmon;
   padding-left: 20px;
   width: 330px;
 

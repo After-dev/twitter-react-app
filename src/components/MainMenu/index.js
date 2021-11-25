@@ -8,11 +8,12 @@ import {
   UserName,
   UserAlias
 } from './styles'
+import { Link } from 'react-router-dom'
 import Button from 'components/Button'
 import UserImg from 'components/UserImg'
 
 import { ReactComponent as Logo } from 'assets/icons/logo.svg'
-import { ReactComponent as HomeIcon } from 'assets/icons/home.svg'
+import { ReactComponent as Home } from 'assets/icons/home.svg'
 import { ReactComponent as Explore } from 'assets/icons/explore.svg'
 import { ReactComponent as Bell } from 'assets/icons/bell.svg'
 import { ReactComponent as Letter } from 'assets/icons/letter.svg'
@@ -24,16 +25,16 @@ import { ReactComponent as Etc } from 'assets/icons/etc.svg'
 import { ReactComponent as Tweetear } from 'assets/icons/tweetear.svg'
 
 
-export default function Home () {
+export default function MainMenu () {
   const [itemActive, setItemActive] = useState(0)
   const [items] = useState([
-    {text: 'Inicio', icon: <HomeIcon/>, link: 'home'},
-    {text: 'Explorar', icon: <Explore/>, link: 'explore'},
-    {text: 'Notificaciones', icon: <Bell/>, link: 'notifications'},
-    {text: 'Mensajes', icon: <Letter/>, link: 'messages'},
-    {text: 'Guardados', icon: <Bookmarks/>, link: 'bookmarks'},
-    {text: 'Listas', icon: <List/>, link: 'lists'},
-    {text: 'Perfil', icon: <User/>, link: ''},
+    {text: 'Inicio', icon: <Home/>, link: '/home'},
+    {text: 'Explorar', icon: <Explore/>, link: '/explore'},
+    {text: 'Notificaciones', icon: <Bell/>, link: '/notifications'},
+    {text: 'Mensajes', icon: <Letter/>, link: '/messages'},
+    {text: 'Guardados', icon: <Bookmarks/>, link: '/i/bookmarks'},
+    {text: 'Listas', icon: <List/>, link: '/user/lists'},
+    {text: 'Perfil', icon: <User/>, link: '/user'},
     {text: 'Más opciones', icon: <Options/>, link: ''}
   ])
 
@@ -44,15 +45,17 @@ export default function Home () {
   return (
     <Container>
       <ContainerActions>
-        <Button
-          icon={<Logo />}
-          iconSize='28px'
-          defaultColor='rgba(29,161,242,1.0)'
-          padding='8px'
-          handleClick={() => handleActionClick(0)}
-          hoverEffect
-          hoverBackgroundColor='rgba(29,161,242,0.1)'
-          />
+        <Link to='/home'>
+          <Button
+            icon={<Logo />}
+            iconSize='28px'
+            defaultColor='rgba(29,161,242,1.0)'
+            padding='8px'
+            handleClick={() => handleActionClick(0)}
+            hoverEffect
+            hoverBackgroundColor='rgba(29,161,242,0.1)'
+            />
+        </Link>
         <br/>
         {
           items.map((item,i) => {
@@ -74,13 +77,13 @@ export default function Home () {
             }
 
             return (
-              <>
+              <Link to={item.link}>
                 <Button
                   {...itemProps}
                   handleClick={() => handleActionClick(i)}
                   />
                 <br/>
-              </>
+              </Link>
             )
           })
         }

@@ -12,7 +12,7 @@ export const Container = styled('div')`
 `
 
 export const ContainerActions = styled('div')`
-  & > div:nth-child(19) {
+  & > div {
     margin: 16px 0px;
     & svg {
       display: none;
@@ -20,7 +20,7 @@ export const ContainerActions = styled('div')`
   }
 
   ${bps.bp1} {
-    & > div:nth-child(19) svg {
+    & > div svg {
       display: inline;
     }
 
